@@ -1,0 +1,124 @@
+<html>
+
+<head>
+	<meta name="viewport" content="with=device-width, initial-scale=1.0">
+	<title>Home Page</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="images/login-page.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<section class="header" id="primapagina">
+		<nav>
+
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+				<ul>
+					<li><a href="contact.html">contact</a></li>
+					<li><a href="build.html">Part Picker</a></li>
+					<li><a href="cable.html">Cable Management</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+		</nav>
+
+		<main id="main-holder">
+
+			<div class="text-box">
+				<h1> PC Parts Shop </h1>
+				<p> We will help you with finding the right parts for your needs, and teach you how to build and set up
+					your
+					own PC </p>
+				<a href="https://www.youtube.com/watch?v=v7MYOpFONCU" class="hero-btn">Quick How to Build Video</a>
+
+			</div>
+
+
+
+			<form id="login-form">
+				<h1 id="login-header">Login</h1>
+				<img src="images/freyja.jpeg" style="border-radius: 50%;">
+				<h2 style="margin-top: 69px;">Florin Alecu</h2>
+
+				<div id="login-error-msg-holder">
+					<p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+				</div>
+
+				<input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+				<input type="password" name="password" id="password-field" class="login-form-field"
+					placeholder="Password">
+				<input type="submit" value="Login" id="login-form-submit">
+			</form>
+
+		</main>
+	</section>
+
+	<section class="stages">
+		<h1>Examples of PCs</h1>
+		<p> Here are 3 PC builds suitable for every budget </p>
+
+		<div class="row">
+			<div class="stages-col">
+				<img src="images/lowend.jpg">
+				<a href="https://www.pcgarage.ro/sisteme-pc-garage/firstgear/gaming-warglaive/">
+					<h3>Entry Level Gaming</h3>
+				</a>
+				<p>The AMD Ryzen 3 1200AF in this build, paired with the GTX 1050Ti is a great combination for light
+					gaming.<br> This sistem is suitable enough for some older or light games</p>
+			</div>
+			<div class="stages-col">
+				<img src="images/midend.jpg">
+				<a href="https://www.pcgarage.ro/sisteme-pc-garage/pc-garage/gaming-trident/">
+					<h3>Mid Tier Gaming</h3>
+				</a>
+				<p>AMD Ryzen 5 3600, paired with the GTX 1660Ti, a great selection of parts suitable for some AAA games
+					and competitive titles</p>
+			</div>
+			<div class="stages-col">
+				<img src="images/highend.jpg">
+				<a href="https://www.pcgarage.ro/sisteme-pc-garage/pc-garage/gaming-magnus-x/">
+					<h3>High End Gaming</h3>
+				</a>
+				<p>This Gaming PC is more than enough to play the latest titles and stream simulaneously.<br>The Ryzen 9
+					5900X, paired with the RTX 3080 make a great future-proof pair</p>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="inspiration">
+
+	</section>
+
+
+
+	<script>
+		$('p').hide();
+		$('#1').show();
+		$('select').change(function () {
+			$('p').hide();
+			var a = $(this).val();
+			$("#" + a).show();
+		})
+	</script>
+	<!-- open mobile script -->
+	<script>
+
+		var navLinks = document.getElementById("navLinks");
+		function showMenu() {
+			navLinks.style.right = "0";
+		}
+		function hideMenu() {
+			navLinks.style.right = "-400";
+		}
+
+	</script>
+	
+
+</body>
+
+</html>
